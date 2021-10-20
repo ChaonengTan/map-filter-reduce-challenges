@@ -71,15 +71,18 @@ console.log(stringDesc)
 
 // TODO: Filter the names array to create a new array that 
 // that contains only names that begin with the letter 'b'
-
+const namesb = names.filter(name => name[0]==='b')
+console.log(namesb)
 
 // TODO: Filter the primes array to a new array that contains 
 // only numbers that are greater than 10
-
+const primes10 = primes.filter(num => num>10)
+console.log(primes10)
 
 // TODO: Filter the users array to a new array containing 
 // Users with a rating greater than 2850
-
+const users2850 = users.filter(user => user.rating>2850)
+console.log(users2850)
 
 // ---------------------------------------------------------------
 
