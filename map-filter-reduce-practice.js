@@ -100,19 +100,26 @@ console.log(users2850)
 // TODO: Reduce the names array to a string made from the first 
 // letter of each string in the source array: 
 // ['anatoly', 'bobby', 'carlsen'] -> 'abc'
-
+const name1red = names.reduce((acc, str) => acc+str[0])
+console.log(name1red)
 
 
 // TODO: Reduce the primes array to the total sum of all 
 // numbers in the array. 
 // [1,2,3,5,7,11,13] -> 42
-
+const primesTot = primes.reduce((acc, num) => acc+num)
+console.log(primesTot)
 
 
 // TODO: Reduce the users array to on object with the key 
 // as the name and value as the rating. For example: 
 // [{ name: "anatoly", rating: 2848 }, {}, {}] -> { 'anatoly': 2848, 'bobby': 2785, 'carlsen': 2882 }
-
+console.log(`KV ~~~~~~~~~~~~~~~~~`)
+const kv = users.reduce((acc, obj) => {
+	const [ uname, urating ] = [obj.name, obj.rating]
+	return {...acc, uname: urating}
+})
+console.log(kv)
 
 
 // ----------------------------------------------------------
@@ -129,7 +136,8 @@ console.log(users2850)
 // TODO: filter the primes array to numbers less than 10. Then 
 // reduce to get the sum. 
 // primes.filter().reduce() -> 18
-
+const comb1 = primes.filter(num => num<10).reduce((acc, num) => acc+num)
+console.log(comb1)
 
 // TODO: filter the users array to get all of the players 
 // with ratings above 2850 and then map these objects to 
