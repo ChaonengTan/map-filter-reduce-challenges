@@ -114,11 +114,10 @@ console.log(primesTot)
 // TODO: Reduce the users array to on object with the key 
 // as the name and value as the rating. For example: 
 // [{ name: "anatoly", rating: 2848 }, {}, {}] -> { 'anatoly': 2848, 'bobby': 2785, 'carlsen': 2882 }
-console.log(`KV ~~~~~~~~~~~~~~~~~`)
 const kv = users.reduce((acc, obj) => {
-	const [ uname, urating ] = [obj.name, obj.rating]
-	return {...acc, uname: urating}
-})
+	acc[obj.name] = obj.rating
+	return acc
+}, {})
 console.log(kv)
 
 
