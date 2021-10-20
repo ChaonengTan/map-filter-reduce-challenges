@@ -142,12 +142,13 @@ console.log(comb1)
 // with ratings above 2850 and then map these objects to 
 // name and rating strings: 
 // users.filter().map() -> ['anatoly rating: 2848', ...]
-
-
+const comb2 = users.filter(user => user.rating>2850).map(user => `${user.name}: ${user.rating}`)
+console.log(comb2)
 // TODO: Sometimes you'll run into data that is missing. 
 // often this will appear as undefined, or null. The 
 // array below has some undefined values. Filter these 
 // then get the sum. 
 
 const data = [23, 44, undefined, 12, undefined, 59, 83, 13, 42, 71, undefined]
-
+const comb3 = data.filter(x => x!=undefined).reduce((acc, num) => acc+num)
+console.log(comb3)
